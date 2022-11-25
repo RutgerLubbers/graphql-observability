@@ -1,0 +1,16 @@
+type Organisation {
+    id: ID!
+    name: String!
+    cluster: String!
+    locations: [Location]!
+}
+
+type Location {
+    id: ID!
+    name: String!
+}
+
+type Query {
+    #listOrganisations
+    listOrganisations(count: Int = 10, offset: Int = 0): [Organisation!]!
+}
